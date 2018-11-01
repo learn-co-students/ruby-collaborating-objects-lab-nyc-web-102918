@@ -20,9 +20,6 @@ class Song
     song = self.new(newAr[1])
     artist_name = Artist.find_or_create_by_name(newAr[0])
 
-    # all.find do |element|
-    #   element.name == newAr[0]
-    # end
     song.artist = artist_name
     artist_name.songs << song
     song
